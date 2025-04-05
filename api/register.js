@@ -11,6 +11,7 @@ export default async function handler(req, res) {
   try {
     console.log("Registering ESP...");
     const { espId, espPassword, espIp } = req.body;
+    console.log(espId, espPassword, espIp);
 
     if (!espId || !espPassword || !espIp) {
       return res.status(400).json({ error: "All fields are required" });
